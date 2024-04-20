@@ -21,7 +21,7 @@
                     <input type="text" asp-for="district" class="form-control" />
                     <br />
                     <label> Kategory</label>
-                    <input type="text" asp-for="categoryName" class="form-control" />
+                    @Html.DropDownListFor(x => x.categorId, (List<SelectListItem>)ViewBag.CategoryValues,new{@class="form-control"})
                     <br />
                     <label> Fiyat</label>
                     <input type="text" asp-for="price" class="form-control" />
